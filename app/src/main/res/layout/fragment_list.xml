@@ -4,6 +4,9 @@
     android:layout_height="match_parent"
     tools:context="edu.cnm.bootcamp.santos.myapplication.fragments.ListFragment">
 
-
+    <ListView
+        android:id="@+id/fragmentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </FrameLayout>
