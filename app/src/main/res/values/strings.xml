@@ -2,6 +2,6 @@
     <string name="app_name">My Application</string>
     <string name="lets_go">Let\'s Go</string>
     <string name="load">Load</string>
-
+    <string name="remove">Remove</string>
 </resources>
 

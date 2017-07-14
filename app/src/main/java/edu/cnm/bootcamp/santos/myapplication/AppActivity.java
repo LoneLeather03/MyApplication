@@ -10,7 +10,7 @@ import android.view.View;
 import edu.cnm.bootcamp.santos.myapplication.fragments.ListFragment;
 
 public class AppActivity extends AppCompatActivity implements ListFragment.OnFragmentInteractionListener {
-    ListFragment mListFragment;
+   private ListFragment mListFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,15 @@ public class AppActivity extends AppCompatActivity implements ListFragment.OnFra
         fragmentTransaction.commit();
     }
 
+    private void removeFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.remove(mListFragment);
+        fragmentTransaction.commit();
+    }
 
-
+    @Override
+    public void onCloseClicked() {
+        removeFragment();
+    }
 }
